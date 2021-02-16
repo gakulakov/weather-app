@@ -1,0 +1,39 @@
+.right-bar {
+  background: rgba(196, 196, 196, 0.1);
+  position: absolute;
+  height: 650px;
+  display: block;
+  justify-content: center;
+  top: 118px;
+  right: 0;
+}
+.right-bar__arrow {
+  padding: 0 33px;
+  cursor: pointer;
+}
+.right-bar__list {
+  list-style: none;
+  position: absolute;
+  right: 0;
+}
+.right-bar__list__item {
+  width: 100px;
+  height: 120px;
+  background: linear-gradient(90deg, #00D0FF 0%, #0071FF 100%);
+  border-bottom: 1px solid #ccc;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  transition: width ease-in 0.2s;
+}
+.right-bar__list__item.active {
+  width: 150px;
+}
+.right-bar__list__item:last-child {
+  border: none;
+}
+.right-bar__list__item img {
+  width: 90px;
+}
+
+/*# sourceMappingURL=RightBar.css.map */

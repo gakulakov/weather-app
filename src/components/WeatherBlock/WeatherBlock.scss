@@ -1,0 +1,43 @@
+.weather {
+  color: #fff;
+  font-family: Roboto, sans-serif;
+  margin: 0 auto;
+  text-align: center;
+  //background-image: url("./img/KrasnodarMain.svg");
+  //background-size: 100%;
+  //background-repeat: no-repeat;
+
+  &__mainImg {
+    position: absolute;
+    z-index: 1;
+  }
+
+  &__main{
+    padding: 0 50px;
+    z-index: 50;
+  }
+  &__img {
+    width: 350px;
+  }
+  &__locate {
+    font-weight: 900;
+    font-size: 50px;
+    letter-spacing: 0.05em;
+    margin: 0;
+    text-shadow: 0 0 20px #000;
+
+  }
+  &__now {
+    font-size: 25px;
+    font-weight: 700;
+  }
+  &__temp {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  &__feelsLike {
+    font-size: 20px;
+    font-weight: 700;
+  }
+}

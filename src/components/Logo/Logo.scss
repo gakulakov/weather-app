@@ -1,0 +1,26 @@
+.logo {
+  color: #fff;
+  font-family: Roboto, sans-serif;
+  display: flex;
+
+  a {
+    text-decoration: none;
+    color: #fff;
+    display: flex;
+    align-items: baseline;
+  }
+  &__weather {
+    font-size: 36px;
+    font-weight: bold;
+    margin: 0;
+    padding: 0;
+  }
+  &__app {
+    font-size: 18px;
+    margin: 0;
+    padding: 0;
+  }
+}
+.active {
+  font-weight: 700;
+}

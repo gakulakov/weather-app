@@ -1,0 +1,26 @@
+.favorites {
+  font-family: Roboto, sans-serif;
+  color: #fff;
+
+
+
+  &__cities {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    max-height: 150px;
+    //text-align: center;
+    padding: 50px;
+    text-align: center;
+  }
+
+    &__items {
+      color: #fff;
+      text-decoration: none;
+      //margin: 0 auto;
+      text-align: left;
+      //display: flex;
+      padding: 5px 0;
+      //font-size: 50px;
+    }
+}

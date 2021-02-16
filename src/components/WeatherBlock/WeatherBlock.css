@@ -1,0 +1,39 @@
+.weather {
+  color: #fff;
+  font-family: Roboto, sans-serif;
+  margin: 0 auto;
+  text-align: center;
+}
+.weather__mainImg {
+  position: absolute;
+  z-index: 1;
+}
+.weather__main {
+  padding: 0 50px;
+  z-index: 50;
+}
+.weather__img {
+  width: 350px;
+}
+.weather__locate {
+  font-weight: 900;
+  font-size: 50px;
+  letter-spacing: 0.05em;
+  margin: 0;
+  text-shadow: 0 0 20px #000;
+}
+.weather__now {
+  font-size: 25px;
+  font-weight: 700;
+}
+.weather__temp {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.weather__feelsLike {
+  font-size: 20px;
+  font-weight: 700;
+}
+
+/*# sourceMappingURL=WeatherBlock.css.map */

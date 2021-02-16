@@ -1,0 +1,10 @@
+.central {
+  display: flex;
+  justify-content: flex-start;
+  user-select: none;
+  text-shadow: 0 0 20px #000;
+  filter: drop-shadow(0 0 20px black);
+  margin-bottom: 50px;
+}
+
+/*# sourceMappingURL=CentralBlock.css.map */

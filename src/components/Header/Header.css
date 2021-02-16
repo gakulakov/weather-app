@@ -1,0 +1,30 @@
+.header {
+  background: rgba(196, 196, 196, 0.1);
+  padding: 23px 23px 23px 218px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.header__list {
+  list-style: none;
+  display: flex;
+  align-items: center;
+  color: #fff;
+  font-family: Roboto, sans-serif;
+}
+.header__list img {
+  cursor: pointer;
+}
+.header__list__item {
+  padding: 0 17px;
+  cursor: pointer;
+}
+.header__list__item:nth-child(3) {
+  padding-right: 50px;
+}
+.header__list__item a {
+  text-decoration: none;
+  color: #fff;
+}
+
+/*# sourceMappingURL=Header.css.map */

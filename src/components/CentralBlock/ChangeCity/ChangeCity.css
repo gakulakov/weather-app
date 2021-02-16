@@ -1,0 +1,60 @@
+.change {
+  display: block;
+  align-items: center;
+  max-width: 100px;
+  top: 100px;
+  left: 91px;
+}
+.change__item {
+  color: #ffffff;
+}
+.change__text {
+  text-transform: uppercase;
+  color: #fff;
+  font-family: Roboto, sans-serif;
+}
+.change__text p {
+  margin: 0;
+  padding: 0;
+}
+.change__text p:first-child {
+  font-weight: normal;
+  font-size: 14px;
+  letter-spacing: 0.23em;
+}
+.change__text p:last-child {
+  font-weight: normal;
+  font-size: 22px;
+}
+.change__selectors {
+  border: 4px solid transparent;
+  border-image: linear-gradient(to bottom, #00D2FF 5%, transparent 80%, transparent 100%, #adf2f7 90%);
+  border-image-slice: 1;
+}
+.change__selectors__list {
+  list-style: none;
+  padding: 0;
+  text-align: center;
+}
+.change__selectors__list li {
+  display: inline-block;
+  width: 50px;
+  height: 50px;
+  background: white;
+  border-radius: 50%;
+  margin: 25px 0;
+}
+.change__selectors__list li:nth-child(1) {
+  background: #008AFF;
+}
+.change__selectors__list li:nth-child(2) {
+  background: #fff;
+}
+.change__selectors__list li:nth-child(3) {
+  background: #00FFF6;
+}
+.change__selectors__list li:nth-child(4) {
+  background: #FF0000;
+}
+
+/*# sourceMappingURL=ChangeCity.css.map */
