@@ -3,6 +3,7 @@ import './Header.scss';
 import {Logo} from "../Logo/Logo";
 import {NavLink} from "react-router-dom";
 import {connect} from "react-redux";
+import menu from './img/Menu.svg'
 
 const Header = ({city}) => {
     return(
@@ -15,7 +16,7 @@ const Header = ({city}) => {
                     <li className={'header__list__item'}>SIGN IN</li>
                     <li className={'header__list__item'}><NavLink to={'/'}>{city.toUpperCase()}</NavLink></li>
                     <li className={'header__list__item'}><NavLink to="/favorites">CITIES</NavLink></li>
-                    <img src="./img/Menu.svg" alt="menu"/>
+                    <img src={menu} alt="menu"/>
                 </ul>
             </div>
         </div>
