@@ -12,7 +12,7 @@ const Header = ({city}) => {
             </div>
             <div className={'header__info'}>
                 <ul className={'header__list'}>
-                    <li className={'header__list__item'}>SEARCH</li>
+                    <li className={'header__list__item'}>SIGN IN</li>
                     <li className={'header__list__item'}><NavLink to={'/'}>{city.toUpperCase()}</NavLink></li>
                     <li className={'header__list__item'}><NavLink to="/favorites">CITIES</NavLink></li>
                     <img src="./img/Menu.svg" alt="menu"/>

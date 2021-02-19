@@ -1,9 +1,9 @@
 .central {
   display: flex;
-  justify-content: flex-start;
+  justify-content: center;
+  align-items: center;
   user-select: none;
   text-shadow: 0 0 20px #000;
-  filter: drop-shadow(0 0 20px black);
   margin-bottom: 50px;
 }
 

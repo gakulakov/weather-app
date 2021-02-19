@@ -11,68 +11,68 @@ import axios from "axios";
 
 function App() {
 
-    const [questions, setQuestions] = useState({})
+    // const [questions, setQuestions] = useState({})
 
-    useEffect(() => {
-        const getDB = async () => {
-            try {
-                const response = await axios.get('https://weather-app-9ee4f-default-rtdb.europe-west1.firebasedatabase.app/city.json')
-                console.log(response.data)
-            } catch (e) {
-                console.log('ОШИБКА!', e)
-            }
-        }
+    // useEffect(() => {
+    //     const getDB = async () => {
+    //         try {
+    //             const response = await axios.get('https://weather-app-9ee4f-default-rtdb.europe-west1.firebasedatabase.app/city.json')
+    //             console.log(response.data)
+    //         } catch (e) {
+    //             console.log('ОШИБКА!', e)
+    //         }
+    //     }
 
-        getDB()
-    }, [])
+    //     getDB()
+    // }, [])
 
-    const changeHandler = (itemName) => {
-        return (e) => {
-            setQuestions(prevState => ({
-                ...prevState,
-                [itemName]: e.target.value
-            }))
-            console.log(questions)
-        }
-    }
+    // const changeHandler = (itemName) => {
+    //     return (e) => {
+    //         setQuestions(prevState => ({
+    //             ...prevState,
+    //             [itemName]: e.target.value
+    //         }))
+    //         console.log(questions)
+    //     }
+    // }
 
-    const a = ['give', 'me', 'question'].map(i => <input type="text" key={i} onChange={changeHandler(i)}/>)
+    // const a = ['give', 'me', 'question'].map(i => <input type="text" key={i} onChange={changeHandler(i)}/>)
 
-    const postData = async () => {
-        try {
-           const response = await axios.post('https://weather-app-9ee4f-default-rtdb.europe-west1.firebasedatabase.app/userNames.json', questions)
-            return await response
-        } catch (e) {
-            console.log(e)
-        }
-    }
+    // const postData = async () => {
+    //     try {
+    //        const response = await axios.post('https://weather-app-9ee4f-default-rtdb.europe-west1.firebasedatabase.app/userNames.json', questions)
+    //         return await response
+    //     } catch (e) {
+    //         console.log(e)
+    //     }
+    // }
 
-    const getData = async () => {
-        try {
-            const response = await axios.get('https://weather-app-9ee4f-default-rtdb.europe-west1.firebasedatabase.app/userNames.json')
-            const result = await response
-            console.log(result)
+    // const getData = async () => {
+    //     try {
+    //         const response = await axios.get('https://weather-app-9ee4f-default-rtdb.europe-west1.firebasedatabase.app/userNames.json')
+    //         const result = await response
+    //         console.log(result)
 
-            return await response
-        } catch (e) {
-            console.log(e)
-        }
-    }
+    //         return await response
+    //     } catch (e) {
+    //         console.log(e)
+    //     }
+    // }
 
     return (
         <div className="App">
 
-            <div>
+            {/* <div>
                 {a}
                 <input type="submit" onClick={postData}/>
                 <input type="submit" onClick={getData}/>
-            </div>
+            </div> */}
 
             <Header/>
             <Route path={"/"} exact component={Home}/>
             <Route path={"/favorites"} component={Favorites}/>
             {/*<Home />*/}
-            <RightBar/>
+            {/* <RightBar/> */}
             <Footer/>
         </div>
     );

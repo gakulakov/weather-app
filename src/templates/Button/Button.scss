@@ -1,0 +1,22 @@
+.button {
+    background: linear-gradient(135deg, #00c7c5 0%, #0088d7 100%);
+    color: #fff;
+    font-family: Roboto, sans-serif;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, .4);
+    padding: 5px 50px;
+    text-transform: uppercase;
+    transform-style: preserve-3d;
+    position: relative;
+    overflow: hidden;
+    text-align: center;
+    will-change: transform;
+	z-index: 1;
+
+    cursor: pointer;
+
+    &:hover {
+    box-shadow: 0 6px 20px rgba(0, 0, 0, .9);
+    transition: all ease-in-out 0.3s;
+
+    }
+}

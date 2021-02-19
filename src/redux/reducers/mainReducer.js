@@ -1,9 +1,10 @@
-import {GET_ARR, SELECT_CITY} from "../types/types";
+import {GET_ARR, SELECT_CITY, SHOW_TWO_WEEKS} from "../types/types";
 
 const initialState = {
     city: 'Krasnodar',
     cities: null,
-    twoWeeks: null
+    dataApi: null,
+    twoWeeks: false
 }
 
 export const mainReducer = (state = initialState, action) => {
@@ -15,6 +16,11 @@ export const mainReducer = (state = initialState, action) => {
             }
         case GET_ARR:
             return {
+                ...state,
+                dataApi: action.payload
+            }
+            case SHOW_TWO_WEEKS: 
+            return{
                 ...state,
                 twoWeeks: action.payload
             }

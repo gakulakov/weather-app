@@ -11,7 +11,7 @@ import rain from './img/rainy-6.svg'
 
 import loader from './img/rings.svg'
 import {connect} from "react-redux";
-import {getApi} from "../../redux/actions/action";
+// import {getApi} from "../../redux/actions/action";
 // import axios from "axios";
 
 const WeatherBlock = ({city, getApi}) => {
