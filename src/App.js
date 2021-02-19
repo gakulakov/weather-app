@@ -1,12 +1,13 @@
 import React, {useEffect, useState} from "react";
 import "./App.scss";
-import {Route} from "react-router-dom";
+import {Switch, Route} from "react-router-dom";
 import {Home} from "./components/Home/Home";
 import Header from "./components/Header/Header";
 import {Footer} from "./components/Footer/Footer";
 import {RightBar} from "./components/RightBar/RightBar";
 import Favorites from "./components/Favorites/Favorites";
 import axios from "axios";
+import {Modal} from "./components/Modal/Modal";
 
 
 function App() {
@@ -69,8 +70,12 @@ function App() {
             </div> */}
 
             <Header/>
+            {/*<Modal />*/}
+
+            <Switch>
             <Route path={"/"} exact component={Home}/>
             <Route path={"/favorites"} component={Favorites}/>
+            </Switch>
             {/*<Home />*/}
             {/* <RightBar/> */}
             <Footer/>

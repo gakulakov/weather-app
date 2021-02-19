@@ -50,7 +50,7 @@ const ChangeCity = ({ city, dataApi, getArr }) => {
   //     )
   // })
 
-  const g = () =>
+  const generateCards = () =>
     dataApi?.data.map((i, index) => {
       //   const days = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
       //   const day = new Date(i.ts * 1000).getDay();
@@ -67,7 +67,7 @@ const ChangeCity = ({ city, dataApi, getArr }) => {
         <div className={"change__selectors"}>
           <ul className={"change__selectors__list"}>
             {/*{generateLi}*/}
-            {!load && g()}
+            {!load && generateCards()}
           </ul>
         </div>
       </div>

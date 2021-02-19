@@ -1,0 +1,13 @@
+.weather-card {
+  display: block;
+  background: linear-gradient(-45deg, #113bf8 0%, #113bf8 50%, #3e9ce7 100%);
+  border-radius: 15px;
+  box-shadow: 0px 0px 49px -10px rgba(0, 0, 0, 0.75);
+  cursor: pointer;
+  margin: 5px;
+  font-family: Roboto, sans-serif;
+  font-weight: 600;
+  flex-basis: 11%;
+}
+
+/*# sourceMappingURL=WeatherCard.css.map */

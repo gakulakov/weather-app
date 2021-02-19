@@ -1,4 +1,4 @@
-import React from "react";
+import React, {useState} from "react";
 import "./WeatherCard.scss";
 
 import snow from "./img/snowy-6.svg";
@@ -10,11 +10,15 @@ import cloudyDay from "./img/cloudy-day-1.svg";
 import cloudy from "./img/cloudy.svg";
 import loader from "./img/rings.svg";
 import Tilt from "react-tilt/dist/tilt";
+import Modal from "../../components/Modal/Modal";
 
 // import rain from './img/rainy-6.svg'
 // import thunder from './img/thunder.svg'
 
 export const WeatherCard = ({data, indexId}) => {
+
+    const [showModal, setShowModal] = useState(false)
+
     const days = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
     const day = new Date(data.ts * 1000).getDay();
 
@@ -22,7 +26,7 @@ export const WeatherCard = ({data, indexId}) => {
 
     const description = data.weather.description;
 
-    console.log(description);
+    // console.log(description);
 
     // Выбор svg.
 
@@ -65,17 +69,22 @@ export const WeatherCard = ({data, indexId}) => {
       easing:         "cubic-bezier(.03,.98,.52,.99)",    // Easing on enter/exit.
     }
 
+    const clickHandler = () => setShowModal(prevState => !prevState)
+
     return (
         <>
             <Tilt className="Tilt weather-card" options={options}>
-                <li className={"Tilt-inner"}>
+                <li className={"Tilt-inner"} onClick={() => clickHandler()}>
                     <p className={"Tilt-inner"}>{date}&nbsp;</p>
                     <p className={"Tilt-inner"}>{days[day]}</p>
                     <img src={selectImage()} alt={'image'} className={"Tilt-inner"}/>
                     <p className={"Tilt-inner"}>{data.temp}&deg;</p>
-
                 </li>
             </Tilt>
+
+            {
+                showModal ? <Modal clickHandler={clickHandler} data={data} /> : null
+            }
         </>
     );
 };

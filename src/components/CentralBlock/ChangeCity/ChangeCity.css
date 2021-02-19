@@ -2,9 +2,6 @@
   margin-top: 100px;
   display: block;
   align-items: center;
-  filter: drop-shadow(0 0 20px black);
-  top: 100px;
-  left: 91px;
 }
 .change__container {
   background-color: rgba(215, 219, 255, 0.3);
