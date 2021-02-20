@@ -2,6 +2,8 @@
 
 Weather.app helps you get the latest weather information. The application will provide you with an accurate forecast for 16 days and help you take an umbrella on time. Thanks for using this simple app.
 
+To try the application follow the link: https://weather-ssx.web.app/
+
 ## Available Scripts
 
 In the project directory, you can run:
