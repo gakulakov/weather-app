@@ -3,7 +3,6 @@
   font-family: Roboto, sans-serif;
   display: flex;
   justify-content: center;
-  width: 100%;
   z-index: 50;
 }
 .footer__left {
@@ -25,15 +24,15 @@
   padding-bottom: 10px;
 }
 .footer__right__info {
-  max-height: 160px;
-  display: inline-flex;
+  max-width: 1250px;
+  display: flex;
   flex-wrap: wrap;
-  flex-direction: column;
+  flex-direction: row;
   padding-bottom: 50px;
+  align-items: center;
 }
 .footer__right__info p {
-  margin: 0 250px 0 0;
-  line-height: 3;
+  flex-basis: 35%;
 }
 .footer__right__button {
   font-weight: 700;
@@ -43,6 +42,16 @@
   border-radius: 19px;
   cursor: pointer;
   outline: none;
+}
+@media (max-width: 500px) {
+  .footer__right {
+    padding: 0 50px;
+  }
+}
+@media (max-width: 400px) {
+  .footer__right {
+    padding: 0 15px;
+  }
 }
 
 /*# sourceMappingURL=Footer.css.map */

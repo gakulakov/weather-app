@@ -73,15 +73,12 @@ export const WeatherCard = ({data, indexId}) => {
 
     return (
         <>
-            <Tilt className="Tilt weather-card" options={options}>
-                <li className={"Tilt-inner"} onClick={() => clickHandler()}>
-                    <p className={"Tilt-inner"}>{date}&nbsp;</p>
-                    <p className={"Tilt-inner"}>{days[day]}</p>
+                <li className={"weather-card"} onClick={() => clickHandler()}>
+                    <p>{date}&nbsp;</p>
+                    <p>{days[day]}</p>
                     <img src={selectImage()} alt={'image'} className={"Tilt-inner"}/>
-                    <p className={"Tilt-inner"}>{data.temp}&deg;</p>
+                    <p>{data.temp}&deg;</p>
                 </li>
-            </Tilt>
-
             {
                 showModal ? <Modal clickHandler={clickHandler} data={data} /> : null
             }

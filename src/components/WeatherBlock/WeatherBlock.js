@@ -8,6 +8,7 @@ import sunlite from './img/day.svg'
 import thunder from './img/thunder.svg'
 import cloudy from './img/cloudy.svg'
 import rain from './img/rainy-6.svg'
+import mist from './img/mist.svg'
 
 import loader from './img/rings.svg'
 import {connect} from "react-redux";
@@ -48,6 +49,10 @@ const WeatherBlock = ({city, getApi}) => {
                 return sunlite
             case 'Rain':
                 return rain
+            case 'Mist':
+                return mist
+            case 'Fog':
+                return mist
             default:
                 return loader
         }

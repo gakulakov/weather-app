@@ -3,7 +3,7 @@
   font-family: Roboto, sans-serif;
   display: flex;
   justify-content: center;
-  width: 100%;
+  //width: 100%;
   z-index: 50;
   &__left {
     padding: 0 0 0 84px;
@@ -23,14 +23,15 @@
       }
     }
     &__info {
-      max-height: 160px;
-      display: inline-flex;
+      //max-height: 160px;
+      max-width: 1250px;
+      display: flex;
       flex-wrap: wrap;
-      flex-direction: column;
+      flex-direction: row;
       padding-bottom: 50px;
+      align-items: center;
       p {
-        margin: 0 250px 0 0;
-        line-height: 3;
+        flex-basis: 35%;
       }
     }
     &__button {
@@ -42,6 +43,18 @@
       cursor: pointer;
 
       outline: none;
+    }
+  }
+
+  @media (max-width: 500px) {
+    &__right {
+      padding: 0 50px;
+    }
+  }
+
+  @media (max-width: 400px) {
+    &__right {
+      padding: 0 15px;
     }
   }
 }

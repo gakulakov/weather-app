@@ -3,6 +3,7 @@
   justify-content: center;
   align-items: center;
   user-select: none;
+  flex-wrap: wrap-reverse;
   margin-bottom: 50px;
 }
 
