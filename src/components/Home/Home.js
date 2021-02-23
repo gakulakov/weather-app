@@ -6,7 +6,7 @@ import {Footer} from "../Footer/Footer";
 
 export const Home = () => {
     return (
-        <div>
+        <div className={'home'}>
             <CentralBlock/>
         </div>
     )

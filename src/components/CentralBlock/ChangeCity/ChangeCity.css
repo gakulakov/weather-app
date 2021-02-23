@@ -1,17 +1,13 @@
 .change {
-  margin-top: 100px;
   display: block;
   align-items: center;
 }
-.change__container {
-  background-color: rgba(215, 219, 255, 0.3);
-  border-radius: 25px;
-  padding-top: 16px;
-  display: block;
-  justify-content: center;
-}
 .change__item {
   color: #ffffff;
+}
+.change__container {
+  display: flex;
+  justify-content: center;
 }
 .change__text {
   text-align: center;
@@ -34,18 +30,21 @@
 }
 .change__selectors {
   display: flex;
-  justify-content: center;
+  width: 80%;
+  padding: 20px 50px;
 }
 .change__selectors__list {
   display: flex;
-  justify-content: center;
   list-style: none;
   text-align: center;
   color: #fff;
-  flex-wrap: wrap;
-  flex-direction: row;
-  max-width: 1000px;
   padding: 0;
+}
+.change i {
+  width: 90%;
+  height: 4px;
+  border-radius: 2px;
+  background: rgba(196, 196, 196, 0.1);
 }
 
 /*# sourceMappingURL=ChangeCity.css.map */

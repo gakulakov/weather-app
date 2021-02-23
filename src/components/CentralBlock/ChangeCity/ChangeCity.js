@@ -2,19 +2,23 @@ import React, { useEffect, useState } from "react";
 import "./ChangeCity.scss";
 import { weatherApiSixTeen } from "../../../api/weatherApiSixTeen";
 import { connect } from "react-redux";
-import { getArr } from "../../../redux/actions/action";
-import { WeatherCard } from "../../../templates/WeatherCard/WeatherCard";
+import { getTwoWeeks } from "../../../redux/actions/action";
+import WeatherCard from "../../../templates/WeatherCard/WeatherCard";
+import { Swiper, SwiperSlide } from "swiper/react";
+import SwiperCore, { Navigation, Pagination, Thumbs } from "swiper";
+import "swiper/swiper-bundle.css";
 
-const ChangeCity = ({ city, dataApi, getArr }) => {
+SwiperCore.use([Navigation, Pagination, Thumbs]);
+
+
+const ChangeCity = ({ city, dataTwoWeeks, getTwoWeeks }) => {
   const [load, setLoad] = useState(true);
-  // const [api, setApi] = useState({})
 
   useEffect(() => {
     weatherApiSixTeen(city).then((res) => {
-      // console.log(res)
-      // setApi(res)
+
       setLoad(false);
-      getArr(res);
+      getTwoWeeks(res);
     });
   }, []);
 
@@ -51,24 +55,51 @@ const ChangeCity = ({ city, dataApi, getArr }) => {
   // })
 
   const generateCards = () =>
-    dataApi?.data.map((i, index) => {
+    dataTwoWeeks?.data.map((i, index) => {
       //   const days = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
       //   const day = new Date(i.ts * 1000).getDay();
-      return <WeatherCard data={i} key={index} />;
+      return <SwiperSlide
+      key={`thumb-${index}`}
+      tag={"li"}
+      style={{ listStyle: "none" }}
+    >
+      <WeatherCard data={i} key={index} />
+      </SwiperSlide>
     });
+
+    const windowFinder = () => {
+      if (window.innerWidth >= 1500) return 10
+      if (window.innerWidth < 1500 && window.innerWidth >= 1100) return 8
+      if (window.innerWidth < 1100 && window.innerWidth > 800) return 6
+      if (window.innerWidth < 800 && window.innerWidth > 600) return 4
+      else return 2
+    //   if (window <= 1000) return 12
+  }
 
   return (
     <div className={"change"}>
       <div className={"change__container"}>
-        <div className={"change__text"}>
+        {/* <div className={"change__text"}>
           <p className={"change__aaa"}>available</p>
           <p>weather</p>
-        </div>
+        </div> */}
         <div className={"change__selectors"}>
-          <ul className={"change__selectors__list"}>
+
+         
+            {dataTwoWeeks &&
+             <Swiper
+             id={"thumbs"}
+             spaceBetween={3}
+             slidesPerView={windowFinder()}
+           >
+            {generateCards()}
+            </Swiper>
+
+            }
+
+            
             {/*{generateLi}*/}
-            {!load && generateCards()}
-          </ul>
+            {/* {!load && generateCards()} */}
         </div>
       </div>
     </div>
@@ -78,12 +109,12 @@ const ChangeCity = ({ city, dataApi, getArr }) => {
 const mapStateToProps = (state) => {
   return {
     city: state.main.city,
-    dataApi: state.main.dataApi,
+    dataTwoWeeks: state.main.dataTwoWeeks,
   };
 };
 
 const mapDispatchToProps = {
-  getArr,
+  getTwoWeeks,
 };
 
 export default connect(mapStateToProps, mapDispatchToProps)(ChangeCity);

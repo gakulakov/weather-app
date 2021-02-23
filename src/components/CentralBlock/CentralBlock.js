@@ -1,16 +1,26 @@
 import React from 'react';
 import './CentralBlock.scss';
-import ChangeCity from "./ChangeCity/ChangeCity";
+// import ChangeCity from "./ChangeCity/ChangeCity";
 import WeatherBlock from "../WeatherBlock/WeatherBlock";
+import { connect } from "react-redux";
+import Modal from '../Modal/Modal';
 
 
-const CentralBlock = () => {
+const CentralBlock = ({modal}) => {
     return(
         <div className={'central'}>
-            <ChangeCity />
             <WeatherBlock />
+            {
+            modal?.show ? <Modal data={modal.data} /> : null
+            }
         </div>
     )
 }
 
-export default CentralBlock
+const mapStateToProps = state => {
+    return {
+        modal: state.main.modal
+    }
+}
+
+export default connect(mapStateToProps, null)(CentralBlock)

@@ -1,13 +1,21 @@
 .weather-card {
-  display: block;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
   background: linear-gradient(-45deg, #113bf8 0%, #113bf8 50%, #3e9ce7 100%);
   border-radius: 15px;
   box-shadow: 0px 0px 49px -10px rgba(0, 0, 0, 0.75);
   cursor: pointer;
-  margin: 5px;
+  height: 141px;
+  width: 102px;
+  margin-right: 24px;
   font-family: Roboto, sans-serif;
-  font-weight: 600;
-  flex-basis: 11%;
+  font-weight: 300;
+  font-size: 24px;
+}
+.weather-card p {
+  margin: 0;
 }
 .weather-card:hover {
   box-shadow: 0 0 60px -5px rgba(0, 0, 0, 0.75);

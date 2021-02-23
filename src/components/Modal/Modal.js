@@ -2,6 +2,7 @@ import React from 'react'
 import './Modal.scss'
 import clouds from './img/cloudy-day-3.svg'
 import {connect} from "react-redux";
+import { hideModalHandler } from "../../redux/actions/action";
 
 
 
@@ -14,8 +15,8 @@ import sunlite from "./img/day.svg";
 import lightRain2 from "./img/rainy-4.svg";
 import loader from "./img/rings.svg";
 
-const Modal = ({clickHandler, data, city}) => {
-    const days = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thurday", "Friday", "Saturday"];
+const Modal = ({hideModalHandler, data, city}) => {
+    const days = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
     const months = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'];
 
     const date = {
@@ -75,7 +76,7 @@ const Modal = ({clickHandler, data, city}) => {
                         <p className={'modal__city'}>{city}, RU</p>
                         <p className={'modal__date'}>{`${days[date.dayWeek]} ${date.day} ${months[date.month]}`}</p>
                     </div>
-                    <p className={'modal__cross'} onClick={clickHandler}>&#10006;</p>
+                    <p className={'modal__cross'} onClick={hideModalHandler}>&#10006;</p>
                 </div>
 
                 <div className={'modal__main-info'}>
@@ -127,5 +128,9 @@ const mapStateToProps = state => {
     }
 }
 
+const mapDispatchToProps = {
+    hideModalHandler
+}
 
-export default connect(mapStateToProps, null)(Modal)
+
+export default connect(mapStateToProps, mapDispatchToProps)(Modal)

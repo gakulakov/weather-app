@@ -1,0 +1,25 @@
+.day-card {
+  display: flex;
+  font-family: Roboto, sans-serif;
+  font-size: 24px;
+  padding: 0 40px;
+  position: relative;
+  flex-direction: column;
+}
+.day-card:after {
+  content: "";
+  width: 2px;
+  background: rgba(255, 255, 255, 0.27);
+  height: 90px;
+  position: absolute;
+  right: 0;
+  top: 15%;
+}
+.day-card p {
+  margin: 0;
+}
+.day-card img {
+  user-select: none;
+}
+
+/*# sourceMappingURL=DayCard.css.map */

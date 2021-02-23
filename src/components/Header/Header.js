@@ -3,7 +3,7 @@ import './Header.scss';
 import {Logo} from "../Logo/Logo";
 import {NavLink} from "react-router-dom";
 import {connect} from "react-redux";
-import menu from './img/Menu.svg'
+import menu from './img/menu.svg'
 
 const Header = ({city}) => {
     return(
@@ -13,9 +13,9 @@ const Header = ({city}) => {
             </div>
             <div className={'header__info'}>
                 <ul className={'header__list'}>
-                    <li className={'header__list__item'}>SIGN IN</li>
-                    <li className={'header__list__item'}><NavLink to={'/'}>{city.toUpperCase()}</NavLink></li>
-                    <li className={'header__list__item'}><NavLink to="/favorites">CITIES</NavLink></li>
+                    {/*<li className={'header__list__item'}>SIGN IN</li>*/}
+                    {/*<li className={'header__list__item'}><NavLink to="/favorites">CITIES</NavLink></li>*/}
+                    <li className={'header__list__item'}><NavLink to={'/favorites'}>{city.toUpperCase()}</NavLink></li>
                     <img src={menu} alt="menu"/>
                 </ul>
             </div>

@@ -1,3 +1,15 @@
-
+.App {
+  padding: 0 218px;
+}
+@media (max-width: 1650px) {
+  .App {
+    padding: 0 100px;
+  }
+}
+@media (max-width: 900px) {
+  .App {
+    padding: 0 50px;
+  }
+}
 
 /*# sourceMappingURL=App.css.map */

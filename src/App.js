@@ -78,7 +78,7 @@ function App() {
             </Switch>
             {/*<Home />*/}
             {/* <RightBar/> */}
-            <Footer/>
+            {/*<Footer/>*/}
         </div>
     );
 }
